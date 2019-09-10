@@ -16,6 +16,7 @@ Plug 'marcweber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'pbondoer/vim-42header'
 
 set rtp+=/usr/local/opt/fzf
 
@@ -23,6 +24,7 @@ call plug#end()
 
 " Syntastic settings :
 let g:syntastic_c_compiler = "gcc -Wall -Werror -Wextra -Weverything"
+
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -44,6 +46,7 @@ filetype plugin indent on
 " Keyboard bindings
 inoremap jj <ESC>
 inoremap ( ()<left>
+inoremap " ""<left>
 inoremap { {}<left><enter><enter><up><tab>
 inoremap [ []<left>
 inoremap <F2> if ()<left>
@@ -81,11 +84,12 @@ set termguicolors
 set guicursor=
 set cursorline
 hi CursorLine cterm=bold ctermbg=239 guifg=NONE
+set colorcolumn=81
 
 
 " Characters
 set scrolloff=5
-set tabstop=4
+set tabstop=8
 
 " Folding
 set foldlevelstart=99
