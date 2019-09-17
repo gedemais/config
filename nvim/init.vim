@@ -3,6 +3,9 @@ if has("autocmd")
     autocmd! bufwritepost init.vim source ~/.config/nvim/init.vim | AirlineRefresh
 endif
 
+" Language stuff
+language en_US
+
 " Plugins
 call plug#begin()
 
@@ -35,13 +38,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-map <silent> <Tab> :NERDTreeToggle<CR>
-
 " Airline settings
 let g:airline_theme='wombat'
-
-" A voir
-filetype plugin indent on
 
 " Keyboard bindings
 inoremap jj <ESC>
@@ -75,6 +73,7 @@ set splitbelow
 set splitright
 
 " Files
+filetype plugin indent on
 set noswapfile
 
 " Colors and themes
