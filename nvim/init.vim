@@ -3,9 +3,6 @@ if has("autocmd")
     autocmd! bufwritepost init.vim source ~/.config/nvim/init.vim | AirlineRefresh
 endif
 
-" Language stuff
-language en_US
-
 " Plugins
 call plug#begin()
 
@@ -26,8 +23,8 @@ set rtp+=/usr/local/opt/fzf
 call plug#end()
 
 " Syntastic settings :
-let g:syntastic_c_compiler = "gcc -Wall -Werror -Wextra -Weverything"
-
+let g:syntastic_c_compiler = "gcc"
+let g:syntastic_c_compiler_options=" -Wall -Werror -Wextra -Weverything"
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -38,8 +35,13 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+map <silent> <Tab> :NERDTreeToggle<CR>
+
 " Airline settings
 let g:airline_theme='wombat'
+
+" A voir
+filetype plugin indent on
 
 " Keyboard bindings
 inoremap jj <ESC>
@@ -73,7 +75,6 @@ set splitbelow
 set splitright
 
 " Files
-filetype plugin indent on
 set noswapfile
 
 " Colors and themes
@@ -88,7 +89,12 @@ set colorcolumn=81
 
 " Characters
 set scrolloff=5
-set tabstop=8
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set noexpandtab
+set smartindent
+set smarttab
 
 " Folding
 set foldlevelstart=99
