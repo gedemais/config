@@ -17,6 +17,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'pbondoer/vim-42header'
+Plug 'xolox/vim-colorscheme-switcher'
 
 set rtp+=/usr/local/opt/fzf
 
