@@ -108,7 +108,7 @@ set mouse=a
 set undolevels=1000
 
 " Basics
-set nu
+set rnu
 set ruler
 set nowrap
 set ttyfast
