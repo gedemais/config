@@ -14,16 +14,14 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'garbas/vim-snipmate'
 Plug 'marcweber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'pbondoer/vim-42header'
+Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
-
-set rtp+=/usr/local/opt/fzf
 
 call plug#end()
 
 " Syntastic settings :
+"	C compilation
 let g:syntastic_c_compiler = "gcc"
 let g:syntastic_c_compiler_options=" -Wall -Werror -Wextra -Weverything"
 
@@ -48,14 +46,14 @@ filetype plugin indent on
 inoremap jj <ESC>
 inoremap ( ()<left>
 inoremap " ""<left>
-inoremap { {}<left><enter><enter><up><tab>
+inoremap { {}<left>
 inoremap [ []<left>
-inoremap <F2> if ()<left>
-inoremap <F3> else if ()<left>
-inoremap <F4> else<enter>
-inoremap <F5> while ()<left>
-inoremap <F6> if (!( = ()malloc(sizeof() * )))<enter>return ();<up><left><left><left><left><left><left><left><left><left><left><left><left>
-inoremap <F10> return ();<left><left>
+
+" Moving in insert mode
+inoremap <C-H> <Left>
+inoremap <C-J> <Down>
+inoremap <C-K> <Up>
+inoremap <C-L> <Right>
 
 " Split panes management bindings
 nnoremap <C-J> <C-W><C-J>
@@ -63,7 +61,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Terminal vs buffers PeaceMaker
+" Terminal adaptors
 tnoremap <Esc> <C-\><C-n>
 tnoremap jj <C-\><C-n>
 tnoremap <C-J> <C-W><C-J>
@@ -78,7 +76,7 @@ set splitright
 " Files
 set noswapfile
 
-" Colors and themes
+" Colors and schemes
 colorscheme gruvbox
 let g:gruvbox_contrast_dark='hard'
 set termguicolors
@@ -86,7 +84,6 @@ set guicursor=
 set cursorline
 hi CursorLine cterm=bold ctermbg=239 guifg=NONE
 set colorcolumn=81
-
 
 " Characters
 set scrolloff=5
