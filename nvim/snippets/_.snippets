@@ -1,7 +1,7 @@
 snippet i_var
-	int		$1;
+	int		i;
 
-	$1 = 0;
+	i = 0;
 
 snippet ui_var
 	unsigned int		i;
@@ -14,54 +14,65 @@ snippet unsi
 snippet print
 	printf("\n");
 
-snippet func_v
-	void	()
-	{
-	
-	}
-
-snippet func_siv
-	static inline void	()
-	{
-			
-	}
-
 snippet func_i
-	int	()
+	int		()
 	{
-		return (0);
-	}
-
-snippet func_sii
-	static inline int	()
-	{
-			
-		return (0);
+		
+		return ();
 	}
 
 snippet func_c
 	char	()
 	{
-			
+		
+		return ();
 	}
 
-snippet func_sic
-	static inline char	()
+snippet func_v
+	void	()
 	{
-			
+		
 	}
 
-snippet func_ui
-	unsigned int	()
+snippet func_f
+	float	()
 	{
-			return (0);
+		
+		return ();
 	}
 
-snippet func_siui
-	static inline unsigned int	()
+snippet func_si
+	static int	()
 	{
-		return (0);
+		
+		return ();
 	}
 
+snippet func_sc
+	static char	()
+	{
+		
+		return ();
+	}
 
+snippet func_sv
+	static void	()
+	{
+		
+	}
 
+snippet func_sf
+	static float	()
+	{
+		
+	}
+
+snippet iter_dy
+	int		i;
+
+	i = 0;
+	while (i < nb_cells)
+	{
+		= dyacc(, i);
+		i++;
+	}
