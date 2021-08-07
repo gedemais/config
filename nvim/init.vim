@@ -15,6 +15,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'pbondoer/vim-42header' " 42 Header (fn + f1)
 Plug 'jiangmiao/auto-pairs' " Auto-pairing of brackets, parenthesis, etc...
 
+" Telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 call plug#end()
 
 map <silent> <Tab> :NERDTreeToggle<CR>
@@ -28,17 +33,18 @@ filetype plugin indent on
 " Keyboard bindings
 inoremap jj <ESC>
 
-" Moving in insert mode
-inoremap <C-H> <Left>
-inoremap <C-J> <Down>
-inoremap <C-K> <Up>
-inoremap <C-L> <Right>
-
 " Split panes management bindings
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Find files using Telescope command-line sugar.
+let mapleader=" "
+
+nnoremap <leader>f <cmd>Telescope find_files<cr>
+nnoremap <leader>g <cmd>Telescope grep_string<cr>
+nnoremap <leader>h <cmd>Telescope help_tags<cr>
 
 " Opens a new terminal pane vertically
 nnoremap <C-X> :vs <CR> :term <CR> i
