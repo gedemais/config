@@ -5,41 +5,17 @@ endif
 
 set encoding=utf-8
 
-" Clipboard shortcut
-vnoremap <C-c> "+y
-
 " Plugins
 call plug#begin()
 
-Plug 'nvie/vim-flake8'
-Plug 'vim-syntastic/syntastic'
-Plug 'scrooloose/nerdtree'
-Plug 'lilydjwg/colorizer'
-Plug 'vim-airline/vim-airline'
+Plug 'nvie/vim-flake8' " PEP8 python norm.
+Plug 'scrooloose/nerdtree' " Useful for huge projects
+Plug 'vim-airline/vim-airline' " Airline customization
 Plug 'vim-airline/vim-airline-themes'
-Plug 'garbas/vim-snipmate'
-Plug 'marcweber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'pbondoer/vim-42header'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-colorscheme-switcher'
-Plug 'jiangmiao/auto-pairs'
+Plug 'pbondoer/vim-42header' " 42 Header (fn + f1)
+Plug 'jiangmiao/auto-pairs' " Auto-pairing of brackets, parenthesis, etc...
 
 call plug#end()
-
-" Syntastic settings :
-"	C compilation
-let g:syntastic_c_compiler = "gcc"
-let g:syntastic_c_compiler_options=" -Iinclude/nm/ -Iinclude/otool/ -Ilibft/ -Wall -Werror -Wextra -Weverything"
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 map <silent> <Tab> :NERDTreeToggle<CR>
 
@@ -67,8 +43,8 @@ nnoremap <C-H> <C-W><C-H>
 " Opens a new terminal pane vertically
 nnoremap <C-X> :vs <CR> :term <CR> i
 
-" Terminal adaptors
-set scrollback=512
+" Terminal
+set scrollback=256
 tnoremap <Esc> <C-\><C-n>
 tnoremap jj <C-\><C-n>
 tnoremap <C-J> <C-W><C-J>
@@ -84,8 +60,7 @@ set splitright
 set noswapfile
 
 " Colors and schemes
-colorscheme gruvbox
-let g:gruvbox_contrast_dark='hard'
+color gruvbox
 set termguicolors
 set guicursor=
 set cursorline
@@ -115,9 +90,13 @@ set mouse=a
 " Undoing
 set undolevels=1000
 
-" Basics
+" Basics sets
 set nu rnu
 set ruler
 set nowrap
 set ttyfast
 set showmatch
+
+" Clipboard shortcut
+vnoremap <C-c> "+y
+
