@@ -26,13 +26,15 @@ call plug#end()
 
 map <silent> <Tab> :NERDTreeToggle<CR>
 
+let mapleader=" "
+
 " Airline settings
 let g:airline_theme='wombat'
 
 " A voir
 filetype plugin indent on
 
-" Keyboard bindings
+" Normal mode bindings
 inoremap jj <ESC>
 
 " Split panes management bindings
@@ -41,14 +43,18 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Find files using Telescope command-line sugar.
-let mapleader=" "
-
+" Telescope
+" File browsing
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>of <cmd>Telescope oldfiles<cr>
 nnoremap <leader>lg <cmd>Telescope live_grep<cr>
 nnoremap <leader>gs <cmd>Telescope grep_string<cr>
+" Vim / Telescope settings
+nnoremap <leader>cs <cmd>Telescope colorscheme<cr>
+nnoremap <leader>vo <cmd>Telescope vim_options<cr>
 nnoremap <leader>h <cmd>Telescope help_tags<cr>
+" Git
+nnoremap <leader>gcm <cmd>Telescope git_commits<cr>
 
 " Opens a new terminal pane vertically
 nnoremap <C-X> :vs <CR> :term <CR> i
@@ -108,6 +114,6 @@ set nowrap
 set ttyfast
 set showmatch
 
-" Clipboard shortcut
+" Clipboard shortcuts
 vnoremap <C-c> "+y
 
