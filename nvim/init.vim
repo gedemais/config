@@ -44,8 +44,10 @@ nnoremap <C-H> <C-W><C-H>
 " Find files using Telescope command-line sugar.
 let mapleader=" "
 
-nnoremap <leader>f <cmd>Telescope find_files<cr>
-nnoremap <leader>g <cmd>Telescope grep_string<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>of <cmd>Telescope oldfiles<cr>
+nnoremap <leader>lg <cmd>Telescope live_grep<cr>
+nnoremap <leader>gs <cmd>Telescope grep_string<cr>
 nnoremap <leader>h <cmd>Telescope help_tags<cr>
 
 " Opens a new terminal pane vertically
