@@ -15,6 +15,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'pbondoer/vim-42header' " 42 Header (fn + f1)
 Plug 'jiangmiao/auto-pairs' " Auto-pairing of brackets, parenthesis, etc...
 
+Plug 'dhruvasagar/vim-dotoo' " TODO files
+
 " Telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -64,6 +66,7 @@ set splitright
 
 " Files
 set noswapfile
+set hidden
 
 " Colors and schemes
 color gruvbox

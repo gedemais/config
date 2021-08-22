@@ -1,0 +1,1 @@
+cp -R ./* $HOME/.config/
