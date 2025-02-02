@@ -27,7 +27,7 @@ sudo apt install -y nmap
 sudo apt install -y lynis
 
 # Copy lynis config
-curl https://raw.github.com/gedemais/config/config_kali/lynisrc > ~/.lynisrc
+curl https://raw.githubusercontent.com/gedemais/config/refs/heads/master/kali/lynisrc > ~/.lynisrc
 
 # Activate it for both bash and zsh
 echo "bash ~/.lynisrc &" >> ~/.bashrc
