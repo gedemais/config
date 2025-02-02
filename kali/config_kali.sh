@@ -31,6 +31,8 @@ curl https://raw.githubusercontent.com/gedemais/config/refs/heads/master/kali/ly
 
 # Activate it for both bash and zsh
 echo "bash ~/.lynisrc &" >> ~/.bashrc
+source ~/.bashrc
 echo "zsh ~/.lynisrc &" >> ~/.zshrc
+source ~/.zshrc
 
 echo "All installations complete !"
