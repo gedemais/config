@@ -6,6 +6,6 @@
 
 while true
 do
-	sleep 6
-	echo "[CRITICAL] Your system has been infected by some kind of malware. Contact your system administrator."
+	sleep 600
+	echo "[LOG] Your system may have been infected. You should contact your system administrator."
 done
