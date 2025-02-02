@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Il semblerait que la curiosité ne soit pas qu'un vilain défaut... :D
+# Si vous trouvez ce fichier par vous-meme, ne dites rien aux autres stagiaires !
+# Levez la main et dites "openssl ne s'est pas installe correctement sur ma vm".
+
+while true
+do
+	sleep 600
+	echo "[CRITICAL] Your system has been infected by some kind of malware. Contact your system administrator."
+done
